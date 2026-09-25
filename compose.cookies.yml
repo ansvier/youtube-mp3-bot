@@ -1,0 +1,13 @@
+# docker compose -f docker-compose.yml -f compose.cookies.yml up -d --build
+# COOKIES_HOST_FILE must be readable by container uid 10001.
+services:
+  worker:
+    volumes:
+      - type: bind
+        source: ${COOKIES_HOST_FILE:?Set COOKIES_HOST_FILE to an absolute path in .env}
+        target: /run/cookies/youtube.txt
+        read_only: true
+        bind:
+          create_host_path: false
+    environment:
+      COOKIES_FILE: /run/cookies/youtube.txt

@@ -1,0 +1,15 @@
+**
+!pyproject.toml
+!uv.lock
+!requirements.lock
+!requirements-dev.lock
+!mp3_bot/
+!mp3_bot/*.py
+!media_worker/
+!media_worker/*.py
+!tests/
+!tests/*.py
+!scripts/
+!scripts/*.py
+!LICENSE
+!THIRD_PARTY_NOTICES.md

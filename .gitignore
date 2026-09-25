@@ -1,0 +1,34 @@
+.env
+.env.*
+!.env.example
+cookies/
+secrets/
+*cookies*.txt
+*.pem
+*.key
+*.session
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+tmp/
+temp/
+logs/
+*.log
+*.mp3
+*.webm
+*.m4a
+*.part
+.DS_Store
+# Verification output may contain local paths or runtime metadata.
+artifacts/
+coverage.xml
+junit*.xml
+# Personal launch helpers and runtime notes never belong in the distribution.
+docs/OWNER_RUNTIME.md
+scripts/owner_launch.py
+scripts/use-local-docker.sh
+*.zip

@@ -1,0 +1,13 @@
+# Optional resource override for a separately installed trusted local Bot API.
+# Requires enough REAL RAM on the Docker host/VM. No server is provisioned here.
+services:
+  bot:
+    tmpfs: !override
+      - /tmp:rw,noexec,nosuid,nodev,size=2200m,mode=1777
+    mem_limit: 3g
+    memswap_limit: 3g
+  worker:
+    tmpfs: !override
+      - /tmp:rw,noexec,nosuid,nodev,size=4600m,mode=1777
+    mem_limit: 6g
+    memswap_limit: 6g
